@@ -11,7 +11,7 @@ export function formatTanggal(value: string | Date): string {
 
 export function namaHari(value: string | Date): string {
   const d = typeof value === "string" ? new Date(value) : value;
-  return HARI[d.getDay()];
+  return HARI[d.getDay()] ?? "";
 }
 
 export function createId(prefix: string): string {
